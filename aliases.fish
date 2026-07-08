@@ -2,8 +2,8 @@ alias gcl "git clone"
 alias lock "caelestia shell lock lock"
 alias iilock "qs -p ~/.config/caelestia/shell.qml ipc call lock lock"
 alias sv "sudo -E nvim"
-alias ott otter-launcher
 alias fm yazi
+alias spf superfile
 alias respect pay-respects
 alias ranger yazi
 alias krabby "krabby random"
@@ -16,9 +16,10 @@ alias cn "cd ~/shizuru"
 alias spp spotify_player
 alias z-manga "zathura --config-dir ~/.config"
 #alias ls "eza --long --header --icons --git --group-directories-first "
-alias ls 'g -tb --tb-style=unicode --all --title --total-size --sort=size'
+alias l 'g -l -tb --tb-style=unicode --title --total-size --sort=size --dir-first'
 #alias ls "lsd"
-alias l "ls -a"
+alias lsgen "nixos-rebuild list-generations"
+alias ls "l -a"
 alias lt "ls --tree"
 alias gaa "git add ."
 alias gcommit "git commit -m"
@@ -28,7 +29,6 @@ alias .... "cd ../../.."
 alias nh-build "nh os switch --hostname hana"
 alias fucku "nh os switch --update --hostname hana"
 alias rollfuck "sudo nixos-rebuild switch --rollback --flake .#shizuru"
-alias deploy-build "nixos-rebuild switch --flake --sudo"
 alias fuckgc 'nh clean all'
 alias fuckfm nix-melt
 alias fuckdit "codium ~/shizuru/"
@@ -47,7 +47,7 @@ alias ffbochi "ff --config ~/.config/fastfetch/13.jsonc"
 alias ffr "ff --config ~/.config/fastfetch/10.jsonc"
 alias hey hix-maintain
 alias foot-ff "fastfetch --raw ~/.config/fastfetch/out.sixel --logo-width 40 --logo-height 20"
-alias listgen "sudo nix-env -p /nix/var/nix/profiles/system --list-generations"
+alias listgen "nh os info"
 alias lg lazygit
 alias gs 'git status'
 alias ga 'git add .'
